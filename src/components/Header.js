@@ -14,12 +14,39 @@ const Header = () => {
     <header
       className={`${
         header ? "bg-white py-6 shadow-lg" : "bg-transparent py-8"
-      } fixed w-full z-50 transition-all duration-300`}
+      } fixed w-full z-50 transition-all duration-500`}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto flex flex-col items-center gap-y-6 lg:flex-row lg:y-0 lg:justify-between">
+        {/*logo*/}
         <a href="/">
-          {header ? <img src={LogoDark} /> : <img src={LogoWhite} />}
+          {header ? (
+            <img className="w-[200px]" src={LogoDark} alt="" />
+          ) : (
+            <img className="w-[200px]" src={LogoWhite} alt="" />
+          )}
         </a>
+        {/*nav*/}
+        <nav
+          className={`${
+            header ? "text-primary" : "text-white"
+          } flex gap-x-4 lg:gap-x-8 text-[15px] font-tertiary tracking-[3px] uppercase items-center `}
+        >
+          <a href="/" className="hover:text-accent transition">
+            Home
+          </a>
+          <a href="/" className="hover:text-accent transition">
+            Rooms
+          </a>
+          <a href="/" className="hover:text-accent transition">
+            Restaurant
+          </a>
+          <a href="/" className="hover:text-accent transition">
+            Spa
+          </a>
+          <a href="/" className="hover:text-accent transition">
+            Contact
+          </a>
+        </nav>
       </div>
     </header>
   );
