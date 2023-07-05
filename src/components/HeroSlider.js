@@ -45,23 +45,22 @@ const HeroSlider = () => {
             className="h-full relative flex justify-center items-center"
             key={index}
           >
+            <div className="z-50 text-white text-center absolute my-60">
+              <div className="text-[15px] font-primary text-center uppercase tracking-[2px] max-w-[920px] lg:text-[68px] leading-tight mb-6">
+                Just Enjoy & relax
+              </div>
+              <h1 className="text-[32px] font-primary text-center uppercase tracking-[2px] max-w-[920px] lg:text-[68px] leading-tight mb-6">
+                {title}
+              </h1>
+              <button className="btn btn-lg btn-primary mx-auto">
+                {btnText}
+              </button>
+            </div>
             <div className="absolute top-0 w-full h-full">
               <img className="object-cover w-full h-full" src={bg} alt="" />
             </div>
             {/* overlay*/}
-            <div className="absolute w-full h-full bg-black/70">
-              {/* <div className="z-20 text-white text-center absolute ">
-                <div className="uppercase font-tertiary tracking-[6px] absolute">
-                  Just Enjoy & relax
-                </div>
-                <h1 className="text-[32px] font-primary uppercase tracking-[2px] max-w-[920px] lg:text-[68px] leading-tight mb-6">
-                  {title}
-                </h1>
-                <button className="btn btn-lg btn-primary mx-auto">
-                  {btnText}
-                </button> */}
-              {/* </div> */}
-            </div>
+            <div className="absolute w-full h-full bg-black/70"></div>
           </SwiperSlide>
         );
       })}
